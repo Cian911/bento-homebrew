@@ -6,20 +6,20 @@ class Bento < Formula
   desc "TBD
 "
   homepage "https://github.com/Cian911/bento"
-  version "0.0.1-rc"
+  version "0.0.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Cian911/bento/releases/download/v0.0.1-rc/bento_0.0.1-rc_Darwin_arm64.tar.gz"
-      sha256 "cd6a7f93a008d85ac1a8000995e3f8214017a4981fc019193d7a329f1245a3d6"
+    if Hardware::CPU.intel?
+      url "https://github.com/Cian911/bento/releases/download/v0.0.1/bento_0.0.1_Darwin_x86_64.tar.gz"
+      sha256 "3da8acd117a577f09386aadcfa9cb2501a7b687af431295465980b370dc6fc9b"
 
       def install
         bin.install "bento"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Cian911/bento/releases/download/v0.0.1-rc/bento_0.0.1-rc_Darwin_x86_64.tar.gz"
-      sha256 "84c4d36807c83711fcfaaca91f12b46e7071207b4c421e6653a9d1c03e581748"
+    if Hardware::CPU.arm?
+      url "https://github.com/Cian911/bento/releases/download/v0.0.1/bento_0.0.1_Darwin_arm64.tar.gz"
+      sha256 "17d41041a798c68ec6fd676720339f41b803c3856d86e200ce07c35977984006"
 
       def install
         bin.install "bento"
@@ -29,24 +29,24 @@ class Bento < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/bento/releases/download/v0.0.1-rc/bento_0.0.1-rc_Linux_arm64.tar.gz"
-      sha256 "1443a7b3df34c9a70240b04bac906ae44596930cadc9c30c3440cd0b25a39d57"
+      url "https://github.com/Cian911/bento/releases/download/v0.0.1/bento_0.0.1_Linux_arm64.tar.gz"
+      sha256 "36410f79fee7117bad4b8cd17fb0d6930b812e4f8a5d39d9d5cdcac4fe829231"
 
       def install
         bin.install "bento"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Cian911/bento/releases/download/v0.0.1-rc/bento_0.0.1-rc_Linux_x86_64.tar.gz"
-      sha256 "13c5829708bf3ac8c4af2b8e4a0e6aba2a7b665a63df8d3d20b3d2f9d0d9c9be"
+      url "https://github.com/Cian911/bento/releases/download/v0.0.1/bento_0.0.1_Linux_x86_64.tar.gz"
+      sha256 "0e6e6f76c58e77c2547e315eae6929d9d6709d0e66362b0116d625fa914fee02"
 
       def install
         bin.install "bento"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Cian911/bento/releases/download/v0.0.1-rc/bento_0.0.1-rc_Linux_armv6.tar.gz"
-      sha256 "62abb3ee45be811af84c829019ba34593a2aaa9c9e7e007b7b41a9235ce91428"
+      url "https://github.com/Cian911/bento/releases/download/v0.0.1/bento_0.0.1_Linux_armv6.tar.gz"
+      sha256 "ad8799564b7708492f64c6593f9aa7ae9a254dda8848472740019165b6e44dc6"
 
       def install
         bin.install "bento"
